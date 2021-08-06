@@ -17,7 +17,8 @@ def data(request):
             name=request.POST["name"],
             ingredients = request.POST["ingredients"],
             process=request.POST["process"],
-            image=request.FILES["image"])
+            #image=request.FILES["image"]
+        )
         return HttpResponseRedirect('/items/recipe_list/')
     return render (request, 'items/create.html')
 
